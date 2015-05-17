@@ -1,0 +1,31 @@
+// =Typography
+// ----------------------------------------------
+
+=sans-serif
+  font:
+    family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif
+    weight: 400
+
+=serif
+  font:
+    family: 'Georgia', Times, serif
+
+h1,h2,h3,h4
+  +sans-serif
+  font-weight: 300
+
+h1
+  margin-bottom: $spacer-mid
+
+h2
+  margin-bottom: $spacer-low
+  color: $text
+  +font-size(27)
+
+h3
+  margin-bottom: $spacer-low
+  color: $text
+  text-transform: uppercase
+  letter-spacing: 3px
+  font-weight: 600
+  +font-size(14)

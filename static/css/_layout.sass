@@ -1,0 +1,131 @@
+// =Layout
+// ----------------------------------------------
+
+.container
+  width: 50%
+  margin: $spacer-high 0 $spacer-high 20%
+
+  p, ul
+    +font-size(15)
+    font-weight: 300
+
+.content
+  p, ul
+    margin-top: $spacer-low / 2
+
+  ul
+    li:before
+      content: "-"
+      display: inline-block
+      margin-right: 10px
+
+  h2
+    span
+      display: inline-block
+      margin-left: 5px
+      padding: 0px 5px 1px 4px
+      +font-size(15)
+      font-weight: 700
+      line-height: 140%
+      letter-spacing: -.05em
+      vertical-align: top
+      border: 2px solid $text
+      +border-radius(3px)
+      +transition(opacity, .25s)
+      cursor: help
+      opacity: .25
+
+header[role="banner"]
+  position: relative
+  overflow: hidden
+  background: $secondary
+  +transition(all, .5s)
+  -webkit-animation: bgcolorfade 120s infinite forwards linear
+  -moz-animation: bgcolorfade 120s infinite forwards linear
+  animation: bgcolorfade 120s infinite forwards linear
+
+  h1, p, &:after, .logo
+    +transition(all, .45s)
+
+  &:after
+    position: absolute
+    content: ""
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background: url(../images/michieldegraaf-head.jpg) no-repeat center center
+    background-size: cover
+    opacity: 0
+
+  &.fart
+    &:after
+      opacity: 1
+
+    figure .logo
+      fill: $text
+      -webkit-animation: none
+      -moz-animation: none
+      animation: none
+
+    h1, p, p a
+      color: transparent
+      border-color: transparent
+
+  .container
+    position: relative
+    z-index: 10
+    margin:
+      top: $spacer-sky
+      bottom: $spacer-sky
+
+  figure
+    overflow: hidden
+    margin-bottom: $spacer-mid
+
+    .logo
+      display: block
+      float: left
+      width: 56px
+      height: 52px
+      fill: $swissred
+      background: rgba(#fff, .6)
+      -webkit-animation: fillfade 50s infinite linear
+      -moz-animation: fillfade 50s infinite linear
+      animation: fillfade 50s infinite linear
+
+      &:hover
+        cursor: help
+
+  h1
+    color: $text
+    +font-size(40)
+    line-height: 110%
+
+    span
+      display: block
+      opacity: .5
+
+  p
+    .supertitle
+      color: red
+
+    +font-size(17)
+    font-weight: 200
+    color: $text-light
+
+    a
+      color: $text-light
+
+footer[role="contentinfo"]
+  p
+    font-size: smaller
+
+footer[role="contentinfo"],
+.content ul li span,
+small
+  opacity: .5
+  +transition(opacity, .25s)
+
+  &:hover
+    opacity: .75
