@@ -3,7 +3,7 @@
 
 =sans-serif
   font:
-    family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif
+    family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif
     weight: 400
 
 =serif
@@ -16,16 +16,23 @@ h1,h2,h3,h4
 
 h1
   margin-bottom: $spacer-mid
+  color: $text
 
 h2
   margin-bottom: $spacer-low
-  color: $text
+  color: $text-light
   +font-size(27)
 
+  span
+    font-weight: 600
+
 h3
-  margin-bottom: $spacer-low
+  margin-bottom: $spacer-bottom
   color: $text
   text-transform: uppercase
   letter-spacing: 3px
   font-weight: 600
   +font-size(14)
+
+p
+  color: $text-light
