@@ -10,6 +10,7 @@
 *static/fonts
 static/css/style.css
 .htaccess
+config.json
 
 # SASS
 .sass-cache
