@@ -1,9 +1,13 @@
 // =Layout
 // ----------------------------------------------
 
+.clear
+  clear: both
+
 .container
   width: 80%
-  margin: $spacer-high 0 $spacer-high 10%
+  max-width: 1024px
+  margin: $spacer-high auto $spacer-high auto
 
   p, ul
     +font-size(15)
@@ -12,6 +16,16 @@
 .content
   p, ul
     margin-top: $spacer-low / 2
+    +font-size(16)
+    font-weight: 400
+    color: $text-light
+
+    &.additional
+      +font-size(12)
+
+  h2
+    span
+      line-height: 160%
 
   ul
     li:before
@@ -19,21 +33,41 @@
       display: inline-block
       margin-right: 10px
 
-  h2
-    span
-      display: inline-block
-      margin-left: 5px
-      padding: 0px 5px 1px 4px
-      +font-size(15)
-      font-weight: 700
-      line-height: 140%
-      letter-spacing: -.05em
-      vertical-align: top
-      border: 2px solid $text
-      +border-radius(3px)
-      +transition(opacity, .25s)
-      cursor: help
-      opacity: .25
+  .title
+    width: 80%
+
+  .column
+    margin: 25px 65px $spacer-high 0
+    float: left
+    width: 35%
+
+  .biography
+    width: 100%
+
+  .posts
+    .column
+      width: 36%
+
+    h2
+      +font-size(21)
+      margin-bottom: 0
+
+  .connect
+    h2
+      +font-size(21)
+      margin-bottom: 0
+      margin-right: 15px
+
+    .column
+      width: 18%
+
+    p
+      margin: 4px 0 0 0
+
+  .orange
+    height: 100px
+    background-color: red
+
 
 header[role="banner"]
   position: relative
@@ -44,7 +78,7 @@ header[role="banner"]
   -moz-animation: bgcolorfade 120s infinite forwards linear
   animation: bgcolorfade 120s infinite forwards linear
 
-  h1, p, &:after, .logo
+  h1, h2, h3, p, &:after, .logo
     +transition(all, .45s)
 
   &:after
@@ -68,17 +102,18 @@ header[role="banner"]
       -moz-animation: none
       animation: none
 
-    h1, p, p a
+    h1, h2, h3, p, p a
       color: transparent
       border-color: transparent
 
   .container
     position: relative
-    min-height: 400px
+    min-height: 440px
     z-index: 10
     top: $spacer-sky
     margin:
       bottom: $spacer-sky
+    border-bottom: 3px solid $orange
 
     .name
       margin: 40px 0 0 0
@@ -119,11 +154,8 @@ header[role="banner"]
       opacity: .5
 
   p
-    .supertitle
-      color: red
-
-    +font-size(17)
-    font-weight: 200
+    +font-size(16)
+    font-weight: 400
     color: $text-light
 
     a

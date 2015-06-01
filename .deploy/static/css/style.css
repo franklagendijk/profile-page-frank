@@ -18,43 +18,50 @@ button, textarea, input {
   box-shadow: none; }
 
 h1, h2, h3, h4 {
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-weight: 300; }
 
 h1 {
-  margin-bottom: 42.5px; }
+  margin-bottom: 42.5px;
+  color: #4F5350; }
 
 h2 {
   margin-bottom: 21.25px;
-  color: #06061d;
+  color: #BEBBBB;
   font-size: 1.6875rem; }
+  h2 span {
+    font-weight: 600;
+    letter-spacing: -0.5px; }
 
 h3 {
-  margin-bottom: 21.25px;
-  color: #06061d;
+  margin-bottom: 4.25px;
+  color: #4F5350;
   text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: 600;
   font-size: 0.875rem; }
 
+p {
+  color: #BEBBBB; }
+
 body {
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 100%;
-  line-height: 160%;
+  line-height: 180%;
   vertical-align: baseline;
-  color: #73737c;
+  color: #BEBBBB;
   background: white;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility; }
 
 a {
   cursor: pointer;
-  color: #73737c;
+  color: #BEBBBB;
   white-space: nowrap;
   text-decoration: none;
-  border-bottom: 1px solid #73737c;
+  border-bottom: 1px solid #BEBBBB;
   transition: all 0.15s ease-out; }
   a:hover {
     border-color: transparent; }
@@ -66,48 +73,47 @@ hr {
   display: block;
   width: 20%;
   height: 1px;
-  background: #73737c;
+  background: #BEBBBB;
   opacity: 0.2; }
 
+.clear {
+  clear: both; }
+
 .container {
-  width: 50%;
-  margin: 85px 0 85px 20%; }
+  width: 80%;
+  margin: 85px 0 85px 10%; }
   .container p, .container ul {
     font-size: 0.9375rem;
     font-weight: 300; }
 
 .content p, .content ul {
-  margin-top: 10.625px; }
+  margin-top: 10.625px;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #BEBBBB; }
+.content h2 span {
+  line-height: 160%; }
 .content ul li:before {
   content: "-";
   display: inline-block;
   margin-right: 10px; }
-.content h2 span {
-  display: inline-block;
-  margin-left: 5px;
-  padding: 0px 5px 1px 4px;
-  font-size: 0.9375rem;
-  font-weight: 700;
-  line-height: 140%;
-  letter-spacing: -0.05em;
-  vertical-align: top;
-  border: 2px solid #06061d;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  transition: opacity 0.25s ease-out;
-  cursor: help;
-  opacity: 0.25; }
+.content .title {
+  width: 80%; }
+.content .biography {
+  width: 100%; }
+  .content .biography .column {
+    margin: 25px 65px 35px 0;
+    float: left;
+    width: 35%; }
 
 header[role="banner"] {
   position: relative;
   overflow: hidden;
-  background: #f2f2eb;
   transition: all 0.5s ease-out;
   -webkit-animation: bgcolorfade 120s infinite forwards linear;
   -moz-animation: bgcolorfade 120s infinite forwards linear;
   animation: bgcolorfade 120s infinite forwards linear; }
-  header[role="banner"] h1, header[role="banner"] p, header[role="banner"]:after, header[role="banner"] .logo {
+  header[role="banner"] h1, header[role="banner"] h2, header[role="banner"] h3, header[role="banner"] p, header[role="banner"]:after, header[role="banner"] .logo {
     transition: all 0.45s ease-out; }
   header[role="banner"]:after {
     position: absolute;
@@ -122,48 +128,56 @@ header[role="banner"] {
   header[role="banner"].fart:after {
     opacity: 1; }
   header[role="banner"].fart figure .logo {
-    fill: #06061d;
+    fill: #4F5350;
     -webkit-animation: none;
     -moz-animation: none;
     animation: none; }
-  header[role="banner"].fart h1, header[role="banner"].fart p, header[role="banner"].fart p a {
+  header[role="banner"].fart h1, header[role="banner"].fart h2, header[role="banner"].fart h3, header[role="banner"].fart p, header[role="banner"].fart p a {
     color: transparent;
     border-color: transparent; }
   header[role="banner"] .container {
     position: relative;
+    min-height: 440px;
     z-index: 10;
-    margin-top: 170px;
-    margin-bottom: 170px; }
+    top: 170px;
+    margin-bottom: 170px;
+    border-bottom: 3px solid #FCA75A; }
+    header[role="banner"] .container .name {
+      margin: 40px 0 0 0;
+      width: 40%;
+      float: left; }
+    header[role="banner"] .container .profession {
+      float: left;
+      width: 50%; }
+      header[role="banner"] .container .profession h3 {
+        margin: 0; }
   header[role="banner"] figure {
     overflow: hidden;
-    margin-bottom: 42.5px; }
+    margin: 4px 21.25px 0 0;
+    float: left; }
     header[role="banner"] figure .logo {
       display: block;
       float: left;
       width: 56px;
       height: 52px;
-      fill: #df284d;
-      background: rgba(255, 255, 255, 0.6);
       -webkit-animation: fillfade 50s infinite linear;
       -moz-animation: fillfade 50s infinite linear;
       animation: fillfade 50s infinite linear; }
       header[role="banner"] figure .logo:hover {
         cursor: help; }
   header[role="banner"] h1 {
-    color: #06061d;
+    color: #4F5350;
     font-size: 2.5rem;
     line-height: 110%; }
     header[role="banner"] h1 span {
       display: block;
       opacity: 0.5; }
   header[role="banner"] p {
-    font-size: 1.0625rem;
-    font-weight: 200;
-    color: #73737c; }
-    header[role="banner"] p .supertitle {
-      color: red; }
+    font-size: 1rem;
+    font-weight: 400;
+    color: #BEBBBB; }
     header[role="banner"] p a {
-      color: #73737c; }
+      color: #BEBBBB; }
 
 footer[role="contentinfo"] p {
   font-size: smaller; }
@@ -179,7 +193,8 @@ small {
     opacity: 0.75; }
 
 header[role="banner"] figure,
-header[role="banner"] h1,
+header[role="banner"] h2,
+header[role="banner"] h3,
 header[role="banner"] p,
 section[role="main"] {
   opacity: 0;
@@ -191,11 +206,16 @@ section[role="main"] {
   animation: fadein 0.6s 0.5s 1 forwards ease-in-out; }
 
 header[role="banner"] figure {
-  -webkit-animation-delay: 0.8s;
-  -moz-animation-delay: 0.8s;
-  animation-delay: 0.8s; }
+  -webkit-animation-delay: 1.2s;
+  -moz-animation-delay: 1.2s;
+  animation-delay: 1.2s; }
 
-header[role="banner"] h1 {
+header[role="banner"] h2 {
+  -webkit-animation-delay: 1.2s;
+  -moz-animation-delay: 1.2s;
+  animation-delay: 1.2s; }
+
+header[role="banner"] h3 {
   -webkit-animation-delay: 1s;
   -moz-animation-delay: 1s;
   animation-delay: 1s; }
